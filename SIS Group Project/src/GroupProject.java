@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class GroupProject
 	{
-
+		static ArrayList<Student> students = new ArrayList<>();
 		public static void main(String[] args)
 			{
-				ArrayList<Student> students = new ArrayList<>();
+				
 
 				switch(MainMenu.showMenu())
 				{
