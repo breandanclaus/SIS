@@ -20,20 +20,28 @@ public class NewOrDelete {
 	{
 		System.out.println("Give first name");
 		String firstName = userStringInput.nextLine();
+		
 		System.out.println("Give last name");
 		String lastName = userStringInput.nextLine();
+		
 		System.out.println("First class?");
 		String classOne = userStringInput.nextLine();
+		
 		System.out.println("Grade in that class?");
 		char gradeOne = userCharInput.next().charAt(0);
+		
 		System.out.println("Second class?");
 		String classTwo = userStringInput.nextLine();
+		
 		System.out.println("Grade in that class?");
 		char gradeTwo = userCharInput.next().charAt(0);
+		
 		System.out.println("Third class?");
 		String classThree = userStringInput.nextLine();
+		
 		System.out.println("Grade in that class?");
 		char gradeThree = userCharInput.next().charAt(0);
+		
 		GroupProject.students.add(new Student(firstName, lastName, GPA.calculateGpa(), classOne, classTwo, classThree, gradeOne, gradeTwo, gradeThree))
 	}
 

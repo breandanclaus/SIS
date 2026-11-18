@@ -11,5 +11,11 @@ public class GradesOrSchedule {
 		int selection = userIntInput.nextInt();
 		return selection;
 	}
+	
+	private void changeClass()
+	{
+		System.out.println("Which class do you want to switch?");
+		System.out.println("1) " + Student.getClassOne());
+	}
 
 }
