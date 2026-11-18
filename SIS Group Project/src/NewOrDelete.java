@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -15,7 +16,7 @@ public class NewOrDelete {
 		return selection;
 	}
 	
-	public static void addStudent()
+	public static void addStudent(ArrayList<Student> students)
 	{
 		System.out.println("Give first name");
 		String firstName = userStringInput.nextLine();
@@ -36,4 +37,29 @@ public class NewOrDelete {
 		GroupProject.students.add(new Student(firstName, lastName, GPA.calculateGpa(), classOne, classTwo, classThree, gradeOne, gradeTwo, gradeThree))
 	}
 
+	private static double calculateGPA(String g1, String g2, String g3)
+	{
+		double total = gradeToPoints(g1) + gradeToPoints(g2) + gradeToPoints(g3);
+		return Math.round((total / 3.0) * 100.0) / 100.0;
+	}
+
+	private static double gradeToPoints(String grade)
+	{
+		switch (grade)
+		{
+			case "A+":
+			case "A":  return 4.0;
+			case "A-": return 3.7;
+			case "B+": return 3.3;
+			case "B":  return 3.0;
+			case "B-": return 2.7;
+			case "C+": return 2.3;
+			case "C":  return 2.0;
+			case "C-": return 1.7;
+			case "D+": return 1.3;
+			case "D":  return 1.0;
+			case "D-": return 0.7;
+			default:   return 0.0;
+		}
+	}
 }

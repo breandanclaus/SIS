@@ -7,13 +7,27 @@ public class GroupProject
 			{
 				ArrayList<Student> students = new ArrayList<>();
 
-				switch(MainMenu.showMenu())
+				switch (MainMenu.showMenu())
 				{
-					case 1: System.out.println(NewOrDelete.choice());
-					
-					case 2: System.out.println(GradesOrSchedule.choice());
-						
-					case 3: System.out.println(SortStudents.choice());
+					case 1:
+						int choice = NewOrDelete.choice();
+						if (choice == 1)
+						{
+							NewOrDelete.addStudent(students);
+						}
+						else if (choice == 2)
+						{
+							NewOrDelete.deleteStudent(students);
+						}
+						break;
+
+					case 2:
+						System.out.println(GradesOrSchedule.choice());
+						break;
+
+					case 3:
+						Sorting.sortMenu();
+						break;
 				}
 				
 				
