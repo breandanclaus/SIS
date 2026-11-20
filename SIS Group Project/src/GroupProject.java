@@ -5,7 +5,7 @@ public class GroupProject
 		static ArrayList<Student> students = new ArrayList<>();
 		public static void main(String[] args)
 			{
-				
+				FillArray.fillArray(students);
 
 				switch (MainMenu.showMenu())
 				{
@@ -27,7 +27,7 @@ public class GroupProject
 							{
 								GradesOrSchedule.changeGrade(students);
 							}
-						else if (choice == 2)
+						else if (scheduleChoice == 2)
 							{
 								GradesOrSchedule.changeClass(students);
 							}

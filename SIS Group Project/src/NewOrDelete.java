@@ -42,7 +42,12 @@ public class NewOrDelete {
 		System.out.println("Grade in that class?");
 		char gradeThree = userCharInput.next().charAt(0);
 		
-		GroupProject.students.add(new Student(firstName, lastName, GPA.calculateGpa(), classOne, classTwo, classThree, gradeOne, gradeTwo, gradeThree))
+		GroupProject.students.add(new Student(firstName, lastName, GPA.calculateGpa(), classOne, classTwo, classThree, gradeOne, gradeTwo, gradeThree));
+	}
+	
+	public static void deleteStudent(ArrayList<Student> students)
+	{
+		
 	}
 
 	private static double calculateGPA(String g1, String g2, String g3)
