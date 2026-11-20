@@ -129,7 +129,8 @@ C
 Rob 
 Harrington 
 Algebra 
-B+ Biology 
+B+ 
+Biology 
 A 
 English 
 B+
