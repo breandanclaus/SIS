@@ -16,6 +16,7 @@ public class GradesOrSchedule {
 	{
 		System.out.println("Which class do you want to switch?");
 		System.out.println("1) " + Student.getClassOne());
+		System.
 	}
 
 }

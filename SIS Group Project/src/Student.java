@@ -4,7 +4,7 @@ public class Student
 		private String firstName;
 		private String lastName;
 		private double gpa;
-		private String classOne;
+		private static String classOne;
 		private String classTwo;
 		private String classThree;
 		private char gradeOne;
@@ -54,7 +54,7 @@ public class Student
 					this.gpa = gpa;
 			}
 
-		public String getClassOne()
+		public static String getClassOne()
 			{
 					return classOne;
 			}

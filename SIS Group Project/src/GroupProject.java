@@ -22,7 +22,15 @@ public class GroupProject
 						break;
 
 					case 2:
-						System.out.println(GradesOrSchedule.choice());
+						int scheduleChoice = GradesOrSchedule.choice();
+						if (scheduleChoice == 1)
+							{
+								GradesOrSchedule.changeGrade(students);
+							}
+						else if (choice == 2)
+							{
+								GradesOrSchedule.changeClass(students);
+							}
 						break;
 
 					case 3:
