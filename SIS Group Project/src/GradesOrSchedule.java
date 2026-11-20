@@ -29,10 +29,86 @@ public class GradesOrSchedule {
 		
 		int studentChoice = userIntInput.nextInt() - 1;
 		
+		Student changingStudent = students.get(studentChoice);
+		
 		System.out.println("Which class do you want to switch?");
-		System.out.println("1) " + students.get(studentChoice).getClassOne());
-		System.out.println("2) " + students.get(studentChoice).getClassTwo());
-		System.out.println("3) " + students.get(studentChoice).getClassThree());
+		System.out.println("1) " + changingStudent.getClassOne());
+		System.out.println("2) " + changingStudent.getClassTwo());
+		System.out.println("3) " + changingStudent.getClassThree());
+		
+		int classChoice = userIntInput.nextInt();
+		
+		switch (classChoice)
+		{
+			case 1:
+				System.out.print("You are replacing " + changingStudent.getClassOne() + ".");
+				System.out.println("What would you like to replace it with?");
+				System.out.println("1) " + changingStudent.getClassTwo());
+				System.out.println("2) " + changingStudent.getClassThree());
+				
+				int switchChoice = userIntInput.nextInt();
+				
+				String temp = changingStudent.getClassOne();
+				if (switchChoice == 1)
+					{
+						changingStudent.setClassOne(changingStudent.getClassTwo());
+						changingStudent.setClassTwo(temp);
+						System.out.println(temp + "is now "  + changingStudent.getClassOne());
+					}
+				else if (switchChoice == 2)
+					{
+						changingStudent.setClassOne(changingStudent.getClassThree());
+						changingStudent.setClassThree(temp);
+						System.out.println(temp + "is now " + changingStudent.getClassOne());
+					}
+				break;
+				
+			case 2:
+				System.out.print("You are replacing " + changingStudent.getClassTwo() + ".");
+				System.out.println("What would you like to replace it with?");
+				System.out.println("1) " + changingStudent.getClassOne());
+				System.out.println("2) " + changingStudent.getClassThree());
+				
+				switchChoice = userIntInput.nextInt();
+				
+				temp = changingStudent.getClassTwo();
+				if (switchChoice == 1)
+					{
+						changingStudent.setClassTwo(changingStudent.getClassOne());
+						changingStudent.setClassOne(temp);
+						System.out.println(temp + "is now " + changingStudent.getClassTwo());
+					}
+				else if (switchChoice == 2)
+					{
+						changingStudent.setClassTwo(changingStudent.getClassThree());
+						changingStudent.setClassThree(temp);
+						System.out.println(temp + "is now " + changingStudent.getClassTwo());
+					}
+				break;
+				
+			case 3: 
+				System.out.print("You are replacing " + changingStudent.getClassThree() + ".");
+				System.out.println("What would you like to replace it with?");
+				System.out.println("1) " + changingStudent.getClassOne());
+				System.out.println("2) " + changingStudent.getClassTwo());
+				
+				switchChoice = userIntInput.nextInt();
+				
+				temp = changingStudent.getClassThree();
+				if (switchChoice == 1)
+					{
+						changingStudent.setClassThree(changingStudent.getClassOne());
+						changingStudent.setClassOne(temp);
+						System.out.println(temp + "is now " + changingStudent.getClassThree());
+					}
+				else if (switchChoice == 2)
+					{
+						changingStudent.setClassThree(changingStudent.getClassTwo());
+						changingStudent.setClassTwo(temp);
+						System.out.println(temp + "is now " + changingStudent.getClassThree());
+					}
+				break;
+		}
 	}
 
 }
