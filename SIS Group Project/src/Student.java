@@ -7,11 +7,11 @@ public class Student
 		private String classOne;
 		private String classTwo;
 		private String classThree;
-		private char gradeOne;
-		private char gradeTwo;
-		private char gradeThree;
+		private String gradeOne;
+		private String gradeTwo;
+		private String gradeThree;
 		
-		public Student (String f, String l, double g, String cOne, String cTwo, String cThree, char grOne, char grTwo, char grThree)
+		public Student (String f, String l, double g, String cOne, String grOne, String cTwo, String grTwo, String cThree, String grThree)
 		{
 			setFirstName(f);
 			setLastName(l);
@@ -84,32 +84,32 @@ public class Student
 					this.classThree = classThree;
 			}
 
-		public char getGradeOne()
+		public String getGradeOne()
 			{
 					return gradeOne;
 			}
 
-		public void setGradeOne(char gradeOne)
+		public void setGradeOne(String gradeOne)
 			{
 					this.gradeOne = gradeOne;
 			}
 
-		public char getGradeTwo()
+		public String getGradeTwo()
 			{
 					return gradeTwo;
 			}
 
-		public void setGradeTwo(char gradeTwo)
+		public void setGradeTwo(String gradeTwo)
 			{
 					this.gradeTwo = gradeTwo;
 			}
 
-		public char getGradeThree()
+		public String getGradeThree()
 			{
 					return gradeThree;
 			}
 
-		public void setGradeThree(char gradeThree)
+		public void setGradeThree(String gradeThree)
 			{
 					this.gradeThree = gradeThree;
 			}

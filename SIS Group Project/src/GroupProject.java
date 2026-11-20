@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.io.IOException;
+import java.io.File;
 
 public class GroupProject
 	{
 		static ArrayList<Student> students = new ArrayList<>();
-		public static void main(String[] args)
+		public static void main(String[] args) throws IOException
 			{
 				FillArray.fillArray(students);
 
